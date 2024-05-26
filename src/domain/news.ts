@@ -1,13 +1,13 @@
 import { Category } from "./";
 
 export type News = {
-  id: String;
-  title: String;
+  id: string;
+  title: string;
   category: Category;
-  image: String;
-  first_sentence: String;
-  content: String;
-  headline: Boolean;
+  image: string;
+  first_sentence: string;
+  content: string;
+  headline: boolean;
 }
 
 export type NewsHeadline = Omit<News, 'headline' | 'content' | 'first_sentence'>;
