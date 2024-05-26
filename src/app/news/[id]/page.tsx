@@ -3,6 +3,7 @@
 import { Advertising, CategoryText, PageContent } from "@/components";
 import { News } from "@/domain";
 import useApi from "@/hooks/useApi.hook";
+import { getDataAndHour } from "@/utils";
 import { useEffect, useState } from "react";
 import style from "./page.module.scss";
 
@@ -28,16 +29,6 @@ export default function Home() {
     }
   }, [data])
 
-  const getDataAndHour = (dateTimeString: string) => {
-    const dateTime = new Date(dateTimeString);
-
-    const localDateTime = new Date(dateTime.getTime() + (dateTime.getTimezoneOffset() * 60000));
-
-    const formattedDate = `${localDateTime.getDate()}/${localDateTime.getMonth() + 1}/${localDateTime.getFullYear()}`;
-    const formattedHour = `${localDateTime.getHours()}h${localDateTime.getMinutes()}`;
-
-    return { date: formattedDate, hour: formattedHour };
-  }
 
   return (
     <PageContent backButton>
