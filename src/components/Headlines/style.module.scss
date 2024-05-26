@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 500px;
+  margin: 84px 0 32px
+}
+
+.secondary{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px
+}
