@@ -1,0 +1,27 @@
+.header{
+  grid-area: header;
+  background-color: #FFBD14;
+  nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    span{
+      font-size: 23px;
+      font-weight: 700;
+      color: #000;
+      line-height: 29.9px;
+    }
+    .link{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      height: 100%;
+      width: 54px;
+      background-color: #000;
+    }
+  }
+}
