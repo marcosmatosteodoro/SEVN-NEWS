@@ -4,4 +4,5 @@ export * from "./Header";
 export * from "./Headline";
 export * from "./icons";
 export * from "./PageContent";
+export * from "./SecondaryHeadline";
 
