@@ -19,3 +19,9 @@
   max-width: 1280px;
   width: 100%;
 }
+
+@media (max-width: 480px) {
+  .main {
+    padding: 32px 25px 44px ;
+  }
+}
