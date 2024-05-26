@@ -4,12 +4,13 @@ import style from "./style.module.scss";
 
 type PageContent = {
   children: React.ReactNode
+  backButton?: boolean
 }
 
-export function PageContent({ children }: PageContent) {
+export function PageContent({ children, backButton }: PageContent) {
   return (
     <div className={style.page}>
-      <Header />
+      <Header backButton={!!backButton} />
 
       <main className={style.main}>
         <div className={style.container}>
