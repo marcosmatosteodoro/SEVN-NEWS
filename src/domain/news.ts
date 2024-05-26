@@ -8,7 +8,9 @@ export type News = {
   first_sentence: string;
   content: string;
   headline: boolean;
+  created_at: string;
+  author: string;
 }
 
-export type NewsHeadline = Omit<News, 'headline' | 'content' | 'first_sentence'>;
-export type NewsSecondary = Omit<News, 'headline' | 'image'>;
+export type NewsHeadline = Omit<News, 'headline' | 'content' | 'first_sentence' | 'created_at' | 'author'>;
+export type NewsSecondary = Omit<News, 'headline' | 'image' | 'created_at' | 'author'>;
