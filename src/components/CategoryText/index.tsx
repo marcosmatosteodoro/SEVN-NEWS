@@ -6,28 +6,9 @@ type CategoryText = {
 }
 
 export function CategoryText({ category }: CategoryText) {
-  let color;
-
-  switch (category?.code) {
-    case "economia":
-      color = style.economia
-    break;
-
-    case "educacao":
-      color = style.educacao
-    break;
-
-    case "diversidades":
-      color = style.diversidades
-    break;
-
-    default:
-      color = style.default
-  }
-
   return (
     <div>
-      <span className={`${style.text} ${color}`}>
+      <span className={`${style.text} ${style[category?.code]}`}>
         {category.name}
       </span>
     </div>
