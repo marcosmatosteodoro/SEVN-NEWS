@@ -9,7 +9,7 @@ type SecondaryNewsProps = {
 export function SecondaryNews({ news }: SecondaryNewsProps) {
   return (
     <div className={style.container}>
-      {news.map((item, index) => (
+      {news?.length > 0 && news?.map((item, index) => (
         <Link href={"/news/" + item.id} key={index} className={style.content}>
           <div className={`${style.hr} ${style[item.category.code]}`}></div>
           <span className={style.text}>

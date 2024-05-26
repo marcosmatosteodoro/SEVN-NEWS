@@ -10,7 +10,7 @@ type HeadlinesProps = {
 export function Headlines({ headlines }: HeadlinesProps) {
   return (
     <div className={style.container}>
-      {headlines.length > 0 && (
+      {headlines?.length > 0 && (
         <>
           <Headline headline={headlines[0]}/>
           <div className={style.secondary}>
