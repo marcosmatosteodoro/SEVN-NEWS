@@ -1,5 +1,6 @@
 'use client'
 
+import { useApiContext } from '@/context/ApiContext';
 import { News, NewsHeadline, NewsSecondary } from '@/domain';
 import Api from '@/services/Api.service';
 import { useState } from 'react';
@@ -20,12 +21,13 @@ interface UseApiReturnType {
   show: Response<News>;
 }
 
-const useApi = (baseURL: string): UseApiReturnType => {
+const useApi = (): UseApiReturnType => {
+  const { apiUrl } = useApiContext();
+  const api = new Api(apiUrl);
+
   const [headline, setHeadline] = useState<Response<NewsHeadline[]>>({} as Response<NewsHeadline[]>);
   const [secondary, setSecondary] = useState<Response<NewsSecondary[]>>({} as Response<NewsSecondary[]>);
   const [show, setShow] = useState<Response<News>>({} as Response<News>);
-
-  const api = new Api(baseURL);
 
   const getHeadline = async () => {
     setHeadline({ loading: true, error: null, data: {} as NewsHeadline[] });
