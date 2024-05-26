@@ -1,3 +1,4 @@
+import { useApiContext } from "@/context/ApiContext";
 import { NewsHeadline } from "@/domain";
 import { Headline } from "../Headline";
 import { SecondaryHeadline } from "../SecondaryHeadline";
@@ -8,6 +9,8 @@ type HeadlinesProps = {
 }
 
 export function Headlines({ headlines }: HeadlinesProps) {
+  const { apiUrl } = useApiContext();
+
   return (
     <div className={style.container}>
       {headlines?.length > 0 && (
@@ -15,7 +18,7 @@ export function Headlines({ headlines }: HeadlinesProps) {
           <Headline headline={headlines[0]}/>
           <div className={style.secondary}>
             {headlines.slice(1).map((headline, index) => (
-              <SecondaryHeadline key={index} headline={headline} />
+              <SecondaryHeadline key={index} headline={headline} apiUrl={apiUrl} />
             ))}
           </div>
         </>

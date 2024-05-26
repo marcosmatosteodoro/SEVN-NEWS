@@ -6,16 +6,18 @@ import style from "./style.module.scss";
 
 type SecondaryHeadline = {
   headline: NewsHeadline;
+  apiUrl: string;
 }
 
-export function SecondaryHeadline({ headline }: SecondaryHeadline) {
+export function SecondaryHeadline({ headline, apiUrl }: SecondaryHeadline) {
   return (
     <Link href={"/news/" + headline.id}  className={style.container}>
       <div>
         <Image
-          src={"http://localhost:3001" + headline.image}
+          src={apiUrl + headline.image}
           alt={headline.title}
           className={style.img}
+          layout="responsive"
           width={500}
           height={300}
           />
