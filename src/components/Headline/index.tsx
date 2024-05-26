@@ -1,4 +1,5 @@
 import { NewsHeadline } from "@/domain";
+import Link from "next/link";
 import { CategoryText } from "../CategoryText";
 import style from "./style.module.scss";
 
@@ -8,7 +9,7 @@ type HeadlineProps = {
 
 export function Headline({ headline }: HeadlineProps) {
   return (
-    <div className={style.container}>
+    <Link href={"/news/" + headline.id} className={style.container}>
       <CategoryText category={headline.category}/>
 
       <div>
@@ -16,6 +17,6 @@ export function Headline({ headline }: HeadlineProps) {
           {headline.title}
         </h1>
       </div>
-    </div>
+    </Link>
   )
 }
