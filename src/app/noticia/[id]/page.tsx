@@ -1,6 +1,7 @@
 "use client"
 
 import { Advertising, CategoryText, PageContent } from "@/components";
+import { PageError } from "@/components/PageError";
 import { News } from "@/domain";
 import useApi from "@/hooks/useApi.hook";
 import { getDataAndHour } from "@/utils";
@@ -24,7 +25,9 @@ export default function NewsDetails() {
   }, [id]);
 
   useEffect(() => {
-    if(show) setData(show.data)
+    if (show && !show.error){
+      setData(show.data)
+    }
   }, [show])
 
   useEffect(() => {
@@ -63,6 +66,13 @@ export default function NewsDetails() {
 
           <div dangerouslySetInnerHTML={{ __html: show.data.content }} className={style.content}></div>
         </div>
+      )}
+
+      {show.error && (
+        <PageError
+          title="Página não encontrada"
+          text="Não foi possível encontrar o recurso solicitado"
+        />
       )}
     </PageContent>
   );
