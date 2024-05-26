@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { ArrowIcon } from "../icons";
+import { ArrowIcon } from "../";
 import style from "./style.module.scss";
 
 type HeaderProps = {
   backButton?: boolean
 }
 
-export default function Header({ backButton }: HeaderProps) {
+export function Header({ backButton }: HeaderProps) {
   return (
     <header className={style.header}>
       <nav>
