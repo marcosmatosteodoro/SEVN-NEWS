@@ -10,7 +10,17 @@ type Response<T> = {
   data: T;
 }
 
-const useApi = (baseURL: string) => {
+interface UseApiReturnType {
+  getHeadline: () => Promise<void>;
+  getSecondary: () => Promise<void>;
+  getShow: (id: string) => Promise<void>;
+  test: () => Promise<boolean>;
+  headline: Response<NewsHeadline[]>;
+  secondary: Response<NewsSecondary[]>;
+  show: Response<News>;
+}
+
+const useApi = (baseURL: string): UseApiReturnType => {
   const [headline, setHeadline] = useState<Response<NewsHeadline[]>>({} as Response<NewsHeadline[]>);
   const [secondary, setSecondary] = useState<Response<NewsSecondary[]>>({} as Response<NewsSecondary[]>);
   const [show, setShow] = useState<Response<News>>({} as Response<News>);
