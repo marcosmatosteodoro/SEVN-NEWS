@@ -42,7 +42,7 @@ export default function NewsDetails() {
 
           <div className={style.contentTitle}>
             <CategoryText category={show.data.category} />
-            <h1>{show.data.title}</h1>
+            <h1 className={style.title}>{show.data.title}</h1>
           </div>
 
           <div>

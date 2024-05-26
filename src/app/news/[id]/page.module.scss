@@ -41,3 +41,31 @@
   line-height: 15.6px;
   color: #00000033
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 0;
+  }
+  .title {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .content p, .text {
+      font-size: 16px;
+      line-height: 20px;
+  }
+}
