@@ -10,6 +10,7 @@ export default function Home() {
   useEffect(() => {
     getHeadline()
     getSecondary()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

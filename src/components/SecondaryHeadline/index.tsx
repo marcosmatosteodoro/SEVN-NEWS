@@ -5,19 +5,17 @@ import { CategoryText } from "../";
 import style from "./style.module.scss";
 
 type SecondaryHeadline = {
-  key: number;
   headline: NewsHeadline;
 }
 
-export function SecondaryHeadline({ key, headline }: SecondaryHeadline) {
+export function SecondaryHeadline({ headline }: SecondaryHeadline) {
   return (
-    <Link href={"/news/" + headline.id} key={key} className={style.container}>
+    <Link href={"/news/" + headline.id}  className={style.container}>
       <div>
         <Image
           src={"http://localhost:3001" + headline.image}
           alt={headline.title}
           className={style.img}
-          layout="responsive"
           width={500}
           height={300}
           />
