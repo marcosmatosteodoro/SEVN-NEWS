@@ -1,0 +1,38 @@
+.container {
+  display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    grid-auto-flow: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+
+  .hr{
+    width: 5px;
+    height: 100%;
+    min-height: 50px;
+    border-radius: 100px;
+    &.economia {
+      background-color: #FF2D2D
+    }
+    &.educacao {
+      background-color: #24538B
+    }
+    &.diversidades {
+      background-color:#248B28
+    }
+  }
+
+  .text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 5px 0;
+  }
+}
