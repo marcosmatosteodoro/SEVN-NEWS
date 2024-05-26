@@ -10,13 +10,16 @@ type HeadlinesProps = {
 export function Headlines({ headlines }: HeadlinesProps) {
   return (
     <div className={style.container}>
-      <Headline headline={headlines[0]}/>
-
-      <div className={style.secondary}>
-        {headlines.slice(1).map((headline, index) => (
-          <SecondaryHeadline key={index} headline={headline} />
-        ))}
-      </div>
+      {headlines.length > 0 && (
+        <>
+          <Headline headline={headlines[0]}/>
+          <div className={style.secondary}>
+            {headlines.slice(1).map((headline, index) => (
+              <SecondaryHeadline key={index} headline={headline} />
+            ))}
+          </div>
+        </>
+      )}
 
     </div>
   )
