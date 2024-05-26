@@ -4,18 +4,24 @@ import { Advertising, CategoryText, PageContent } from "@/components";
 import { News } from "@/domain";
 import useApi from "@/hooks/useApi.hook";
 import { getDataAndHour } from "@/utils";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import style from "./page.module.scss";
 
-export default function Home() {
+export default function NewsDetails() {
   const {getShow, show} = useApi();
+  const { id } = useParams()
+
   const [date, setDate] = useState<string>("");
   const [hour, setHour] = useState<string>("");
   const [data, setData] = useState<News | null>(null);
 
   useEffect(() => {
-    getShow("c65262cb-2740-4e01-97a8-ecb34dbfa3c9")
-  }, [])
+    if (id && typeof id === "string") {
+      getShow(id);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
 
   useEffect(() => {
     if(show) setData(show.data)
@@ -28,7 +34,6 @@ export default function Home() {
       setHour(hour)
     }
   }, [data])
-
 
   return (
     <PageContent backButton>
