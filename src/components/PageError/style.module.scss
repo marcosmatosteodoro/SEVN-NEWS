@@ -1,0 +1,35 @@
+
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 25px;
+  article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  a{
+    color: #4493F8;
+    text-decoration: underline;
+  }
+  h2 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #000000
+  }
+  .p {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32.5px;
+    color: #000000
+  }
+
+}
+
