@@ -12,7 +12,7 @@ type SecondaryHeadline = {
 export function SecondaryHeadline({ headline, apiUrl }: SecondaryHeadline) {
   return (
     <Link href={"/news/" + headline.id}  className={style.container}>
-      <div>
+      <div className={style.imageDiv}>
         <Image
           src={apiUrl + headline.image}
           alt={headline.title}
