@@ -1,6 +1,5 @@
-import { Advertising, Header, Headlines, PageContent, SecondaryNews } from "@/components";
+import { Advertising, Headlines, PageContent, SecondaryNews } from "@/components";
 import { NewsHeadline, NewsSecondary } from "@/domain";
-import style from "./page.module.scss";
 
 export default function Home() {
   const headlineData: NewsHeadline[] = [
@@ -125,19 +124,12 @@ export default function Home() {
       content: "<p>Os números sorteados foram 10-25-24-28-33-37-38-42-50-54-59-62-74-77-78-85-86-91-95-96… </p><p>O próximo concurso será realizado na segunda, com prêmio estimado de R$ 5 milhões… </p><p>Quatro apostas acertaram 19 números e cada uma leva R$ 61.623,71… </p><p>70 apostas fizeram 18 acertos, com prêmio de R$ 2.200,85… </p><p>Houve 736 apostas vencedoras com 17 dezenas. Cada uma recebe R$ 209,31… </p>"
     }
   ]
+
   return (
     <PageContent>
-      <Header />
-
-      <main className={style.main}>
-        <div className={style.container}>
-          <Advertising />
-
-          <Headlines headlines={headlineData} />
-
-          <SecondaryNews news={secondaryNewsData} />
-        </div>
-      </main>
+      <Advertising />
+      <Headlines headlines={headlineData} />
+      <SecondaryNews news={secondaryNewsData} />
     </PageContent>
   );
 }
