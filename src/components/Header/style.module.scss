@@ -10,10 +10,10 @@
     justify-content: center;
     height: 100%;
     span{
-      font-size: 23px;
-      font-weight: 700;
+      font-size: $fs-23;
+      font-weight: $fw-700;
       color: $black-color;
-      line-height: 29.9px;
+      line-height: $lh-299;
     }
     .link{
       position: absolute;

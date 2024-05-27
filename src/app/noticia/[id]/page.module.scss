@@ -12,9 +12,9 @@
   flex-direction: column;
   gap: 5px;
   .title {
-    font-size: 58px;
-    font-weight: 700;
-    line-height: 60px;
+    font-size: $fs-58;
+    font-weight: $fw-700;
+    line-height: $lh-600;
   }
 }
 
@@ -23,23 +23,23 @@
   flex-direction: column;
   gap: 15px;
   p {
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 32.5px;
+    font-size: $fs-25;
+    font-weight: $fw-400;
+    line-height: $lh-299;
     color: $black-color;
   }
 }
 .text {
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 32.5px;
+  font-size: $fs-25;
+  font-weight: $fw-400;
+  line-height: $lh-299;
   color: $black-color;
 }
 
 .span{
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 15.6px;
+  font-size: $fs-12;
+  font-weight: $fw-700;
+  line-height: $lh-156;
   color: $black-light-color;
 }
 
@@ -54,19 +54,15 @@
     padding: 16px 0;
   }
   .title {
-    font-size: 32px !important;
-    line-height: 40px !important;
+    font-size: $fs-33 !important;
+    line-height: $lh-429 !important;
   }
 
 }
 
 @media (max-width: $break-sm) {
-  .title {
-    font-size: 32px !important;
-    line-height: 40px !important;
-  }
   .content p, .text {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: $fs-15;
+      line-height: $lh-200;
   }
 }

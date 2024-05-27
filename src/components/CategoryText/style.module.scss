@@ -1,9 +1,9 @@
 @import "../../app/variables";
 
 .text {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 15.6px;
+  font-size: $fs-12;
+  font-weight: $fw-700;
+  line-height: $lh-156;
   text-transform: uppercase;
   color: $black-color
 }

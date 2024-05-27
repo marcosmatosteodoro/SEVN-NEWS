@@ -15,8 +15,8 @@
 }
 
 .text {
-  font-size: 33px;
-  font-weight: 700;
-  line-height: 42.9px;
+  font-size: $fs-33;
+  font-weight: $fw-700;
+  line-height: $lh-429;
   color: $black-light-color;
 }
