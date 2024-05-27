@@ -1,3 +1,5 @@
+@import "../../app/variables";
+
 .container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -20,13 +22,13 @@
     min-height: 50px;
     border-radius: 100px;
     &.economia {
-      background-color: #FF2D2D
+      background-color: $red-color;
     }
     &.educacao {
-      background-color: #24538B
+      background-color: $blue-color;
     }
     &.diversidades {
-      background-color:#248B28
+      background-color:$green-color;
     }
   }
 

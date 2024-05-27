@@ -1,17 +1,19 @@
+@import "../../app/variables";
+
 .text {
   font-size: 12px;
   font-weight: 700;
   line-height: 15.6px;
   text-transform: uppercase;
-  color: #000000
+  color: $black-color
 }
 
 .economia {
-  color: #FF2D2D !important;
+  color: $red-color !important;
 }
 .educacao {
-  color: #24538B !important;
+  color: $blue-color !important;
 }
 .diversidades {
-  color:#248B28 !important;
+  color:$green-color !important;
 }

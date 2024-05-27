@@ -1,3 +1,4 @@
+@import "../../variables";
 
 .container{
   padding: 16px 100px;
@@ -25,21 +26,21 @@
     font-size: 25px;
     font-weight: 400;
     line-height: 32.5px;
-    color: #000000
+    color: $black-color;
   }
 }
 .text {
   font-size: 25px;
   font-weight: 400;
   line-height: 32.5px;
-  color: #000000
+  color: $black-color;
 }
 
 .span{
   font-size: 12px;
   font-weight: 700;
   line-height: 15.6px;
-  color: #00000033
+  color: $black-light-color;
 }
 
 @media (max-width: 1024px) {

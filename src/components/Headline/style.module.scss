@@ -1,8 +1,10 @@
+@import "../../app/variables";
+
 .title{
   font-size: 58px;
   font-weight: 700;
   line-height: 60px;
-  color: #000000
+  color: $black-color
 }
 
 .container {

@@ -1,6 +1,8 @@
+@import "../../app/variables";
+
 .header{
   grid-area: header;
-  background-color: #FFBD14;
+  background-color: $primary-color;
   nav {
     position: relative;
     display: flex;
@@ -10,7 +12,7 @@
     span{
       font-size: 23px;
       font-weight: 700;
-      color: #000;
+      color: $black-color;
       line-height: 29.9px;
     }
     .link{
@@ -21,7 +23,7 @@
       left: 0;
       height: 100%;
       width: 54px;
-      background-color: #000;
+      background-color: $black-color;
     }
   }
 }
