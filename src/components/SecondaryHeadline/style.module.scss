@@ -27,7 +27,7 @@
   margin-top: 8px;
 }
 
-@media (max-width: 481px) {
+@media (max-width: $break-sm) {
   .container{
     flex-direction: row;
     gap: 5px

@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $break-lg) {
   .container {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -48,7 +48,7 @@
   }
 }
 
-@media (max-width: 481px) {
+@media (max-width: $break-sm) {
   .container {
     grid-template-rows: auto;
     grid-template-columns: auto;

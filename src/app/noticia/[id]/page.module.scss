@@ -43,13 +43,13 @@
   color: $black-light-color;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $break-lg) {
   .container {
     padding: 16px 25px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $break-md) {
   .container {
     padding: 16px 0;
   }
@@ -60,7 +60,7 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: $break-sm) {
   .title {
     font-size: 32px !important;
     line-height: 40px !important;
