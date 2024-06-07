@@ -1,11 +1,9 @@
-// src/components/SecondaryHeadline/SecondaryHeadline.test.tsx
 import { ApiProvider } from '@/context/ApiContext';
 import { NewsHeadline } from '@/domain';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { SecondaryHeadline } from './';
 
-// Mock the CategoryText component
 jest.mock('../CategoryText', () => ({
   CategoryText: ({ category }: { category: { name: string } }) => (
     <div>{category.name}</div>

@@ -14,7 +14,7 @@ describe('PageContent', () => {
 
     const header = screen.getByRole('banner');
     expect(header).toBeInTheDocument();
-    expect(screen.queryByTestId('back-button')).not.toBeInTheDocument(); // Verifica se o botão de voltar não está presente
+    expect(screen.queryByTestId('back-button')).not.toBeInTheDocument();
   });
 
   it('should render children and header with back button when backButton prop is true', () => {
@@ -29,6 +29,6 @@ describe('PageContent', () => {
 
     const header = screen.getByRole('banner');
     expect(header).toBeInTheDocument();
-    expect(screen.getByTestId('back-button')).toBeInTheDocument(); // Verifica se o botão de voltar está presente
+    expect(screen.getByTestId('back-button')).toBeInTheDocument();
   });
 });

@@ -1,4 +1,3 @@
-// src/components/SecondaryNews/SecondaryNews.test.tsx
 import { ApiProvider } from '@/context/ApiContext';
 import { NewsSecondary } from '@/domain';
 import '@testing-library/jest-dom';
