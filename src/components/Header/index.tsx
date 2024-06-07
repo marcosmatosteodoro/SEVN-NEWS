@@ -15,7 +15,7 @@ export function Header({ backButton }: HeaderProps) {
         </span>
 
         {backButton && (
-          <Link href="/" className={style.link}>
+          <Link href="/" className={style.link} data-testid="back-button">
             <ArrowIcon />
           </Link>
         )}
