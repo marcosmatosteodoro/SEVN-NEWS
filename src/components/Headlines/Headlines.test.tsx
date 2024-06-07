@@ -22,7 +22,11 @@ describe('Headlines', () => {
     ];
 
     // Renderizar o componente Headlines com as manchetes fictícias
-    render(<ApiProvider><Headlines headlines={mockHeadlines} /></ApiProvider>);
+    render(
+      <ApiProvider>
+        <Headlines headlines={mockHeadlines} />
+      </ApiProvider>,
+    );
 
     // Verificar se o título da primeira manchete é renderizado corretamente
     const firstHeadlineTitle = screen.getByText('First Headline');
@@ -37,7 +41,9 @@ describe('Headlines', () => {
     expect(headlineContainer).toBeInTheDocument();
 
     // Verificar se o componente SecondaryHeadline é renderizado corretamente para a segunda manchete
-    const secondaryHeadlineContainer = screen.getByTestId('secondary-headline-container');
+    const secondaryHeadlineContainer = screen.getByTestId(
+      'secondary-headline-container',
+    );
     expect(secondaryHeadlineContainer).toBeInTheDocument();
   });
 });

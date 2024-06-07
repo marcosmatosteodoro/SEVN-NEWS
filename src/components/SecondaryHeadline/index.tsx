@@ -1,17 +1,21 @@
-import { NewsHeadline } from "@/domain";
-import Image from "next/image";
-import Link from "next/link";
-import { CategoryText } from "../";
-import style from "./style.module.scss";
+import { NewsHeadline } from '@/domain';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CategoryText } from '../';
+import style from './style.module.scss';
 
 type SecondaryHeadline = {
   headline: NewsHeadline;
   apiUrl: string;
-}
+};
 
 export function SecondaryHeadline({ headline, apiUrl }: SecondaryHeadline) {
   return (
-    <Link href={"/noticia/" + headline.id}  className={style.container} data-testid="secondary-headline-container">
+    <Link
+      href={'/noticia/' + headline.id}
+      className={style.container}
+      data-testid="secondary-headline-container"
+    >
       <div className={style.imageDiv}>
         <Image
           src={apiUrl + headline.image}
@@ -20,7 +24,7 @@ export function SecondaryHeadline({ headline, apiUrl }: SecondaryHeadline) {
           layout="responsive"
           width={500}
           height={300}
-          />
+        />
       </div>
 
       <div>
@@ -28,5 +32,5 @@ export function SecondaryHeadline({ headline, apiUrl }: SecondaryHeadline) {
         <h2 className={style.title}>{headline.title}</h2>
       </div>
     </Link>
-  )
+  );
 }

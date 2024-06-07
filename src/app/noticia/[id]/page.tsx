@@ -1,57 +1,54 @@
-"use client"
+'use client';
 
-import { Advertising, CategoryText, PageContent } from "@/components";
-import { PageError } from "@/components/PageError";
-import { News } from "@/domain";
-import useApi from "@/hooks/useApi.hook";
-import { getDataAndHour } from "@/utils";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import style from "./page.module.scss";
+import { Advertising, CategoryText, PageContent } from '@/components';
+import { PageError } from '@/components/PageError';
+import { News } from '@/domain';
+import useApi from '@/hooks/useApi.hook';
+import { getDataAndHour } from '@/utils';
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import style from './page.module.scss';
 
 export default function NewsDetails() {
-  const {getShow, show} = useApi();
-  const { id } = useParams()
+  const { getShow, show } = useApi();
+  const { id } = useParams();
 
-  const [date, setDate] = useState<string>("");
-  const [hour, setHour] = useState<string>("");
+  const [date, setDate] = useState<string>('');
+  const [hour, setHour] = useState<string>('');
   const [data, setData] = useState<News | null>(null);
 
   useEffect(() => {
-    if (id && typeof id === "string") {
+    if (id && typeof id === 'string') {
       getShow(id);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   useEffect(() => {
-    if (show && !show.error){
-      setData(show.data)
+    if (show && !show.error) {
+      setData(show.data);
     }
-  }, [show])
+  }, [show]);
 
   useEffect(() => {
-    if(data){
-      const {date, hour} = getDataAndHour(data.created_at);
-      setDate(date)
-      setHour(hour)
+    if (data) {
+      const { date, hour } = getDataAndHour(data.created_at);
+      setDate(date);
+      setHour(hour);
     }
-  }, [data])
+  }, [data]);
 
   return (
     <PageContent backButton>
       {!show.loading && !show.error && data && (
         <div className={style.container}>
-
           <div className={style.contentTitle}>
             <CategoryText category={show.data.category} />
             <h1 className={style.title}>{show.data.title}</h1>
           </div>
 
           <div>
-            <p className={style.text}>
-              {show.data.first_sentence}
-            </p>
+            <p className={style.text}>{show.data.first_sentence}</p>
           </div>
 
           <div>
@@ -64,7 +61,10 @@ export default function NewsDetails() {
             <Advertising />
           </div>
 
-          <div dangerouslySetInnerHTML={{ __html: show.data.content }} className={style.content}></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: show.data.content }}
+            className={style.content}
+          ></div>
         </div>
       )}
 

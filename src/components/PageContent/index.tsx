@@ -1,11 +1,11 @@
-import React from "react";
-import { Header } from "../Header";
-import style from "./style.module.scss";
+import React from 'react';
+import { Header } from '../Header';
+import style from './style.module.scss';
 
 type PageContent = {
-  children: React.ReactNode
-  backButton?: boolean
-}
+  children: React.ReactNode;
+  backButton?: boolean;
+};
 
 export function PageContent({ children, backButton }: PageContent) {
   return (
@@ -13,10 +13,8 @@ export function PageContent({ children, backButton }: PageContent) {
       <Header backButton={!!backButton} />
 
       <main className={style.main}>
-        <div className={style.container}>
-          {children}
-        </div>
+        <div className={style.container}>{children}</div>
       </main>
     </div>
-  )
+  );
 }

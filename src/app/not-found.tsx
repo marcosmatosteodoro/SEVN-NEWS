@@ -1,5 +1,5 @@
-import { PageContent } from '@/components'
-import { PageError } from '@/components/PageError'
+import { PageContent } from '@/components';
+import { PageError } from '@/components/PageError';
 
 export default function NotFound() {
   return (
@@ -9,5 +9,5 @@ export default function NotFound() {
         text="Não foi possível encontrar o recurso solicitado"
       />
     </PageContent>
-  )
+  );
 }

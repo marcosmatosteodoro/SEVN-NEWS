@@ -7,7 +7,7 @@ class Api {
     headline: string;
     secondary: string;
     show: string;
-  }
+  };
 
   constructor(baseURL: string) {
     this.client = axios.create({ baseURL });
@@ -15,7 +15,7 @@ class Api {
       headline: '/news/headline',
       secondary: '/news/secondary',
       show: '/news/',
-    }
+    };
   }
 
   private async GET<T>(endpoint: string): Promise<T> {

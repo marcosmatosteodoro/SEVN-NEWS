@@ -1,17 +1,22 @@
-"use client"
+'use client';
 
-import { Advertising, Headlines, PageContent, SecondaryNews } from "@/components";
-import useApi from "@/hooks/useApi.hook";
-import { useEffect } from "react";
+import {
+  Advertising,
+  Headlines,
+  PageContent,
+  SecondaryNews,
+} from '@/components';
+import useApi from '@/hooks/useApi.hook';
+import { useEffect } from 'react';
 
 export default function Home() {
-  const {getHeadline, getSecondary, headline, secondary} = useApi();
+  const { getHeadline, getSecondary, headline, secondary } = useApi();
 
   useEffect(() => {
-    getHeadline()
-    getSecondary()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    getHeadline();
+    getSecondary();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <PageContent>

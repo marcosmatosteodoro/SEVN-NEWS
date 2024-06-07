@@ -1,9 +1,9 @@
-import { Category } from "@/domain";
-import style from "./style.module.scss";
+import { Category } from '@/domain';
+import style from './style.module.scss';
 
 type CategoryText = {
-  category: Category
-}
+  category: Category;
+};
 
 export function CategoryText({ category }: CategoryText) {
   return (
@@ -12,5 +12,5 @@ export function CategoryText({ category }: CategoryText) {
         {category.name}
       </span>
     </div>
-  )
+  );
 }

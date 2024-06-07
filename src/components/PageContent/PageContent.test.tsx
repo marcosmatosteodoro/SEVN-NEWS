@@ -6,7 +6,7 @@ describe('PageContent', () => {
     render(
       <PageContent>
         <div data-testid="test-child">Test Child</div>
-      </PageContent>
+      </PageContent>,
     );
 
     const testChild = screen.getByTestId('test-child');
@@ -21,7 +21,7 @@ describe('PageContent', () => {
     render(
       <PageContent backButton={true}>
         <div data-testid="test-child">Test Child</div>
-      </PageContent>
+      </PageContent>,
     );
 
     const testChild = screen.getByTestId('test-child');

@@ -7,7 +7,9 @@ import { SecondaryHeadline } from './';
 
 // Mock the CategoryText component
 jest.mock('../CategoryText', () => ({
-  CategoryText: ({ category }: { category: { name: string } }) => <div>{category.name}</div>,
+  CategoryText: ({ category }: { category: { name: string } }) => (
+    <div>{category.name}</div>
+  ),
 }));
 
 const headline: NewsHeadline = {
@@ -17,14 +19,14 @@ const headline: NewsHeadline = {
   category: { id: '1', name: 'TestCategory', code: 'TC' },
 };
 
-const apiUrl = 'https://api.example.com'
+const apiUrl = 'https://api.example.com';
 
 describe('SecondaryHeadline', () => {
   it('should render the title, image, and category correctly', () => {
     render(
       <ApiProvider>
         <SecondaryHeadline headline={headline} apiUrl={apiUrl} />
-      </ApiProvider>
+      </ApiProvider>,
     );
 
     const linkElement = screen.getByRole('link');

@@ -1,10 +1,10 @@
-import Link from "next/link";
-import style from "./style.module.scss";
+import Link from 'next/link';
+import style from './style.module.scss';
 
 type PageErrorProps = {
   title: string;
   text: string;
-}
+};
 
 export function PageError({ title, text }: PageErrorProps) {
   return (
@@ -16,8 +16,7 @@ export function PageError({ title, text }: PageErrorProps) {
           <p>{text}</p>
           <Link href="/">Clique aqui para voltar</Link>
         </div>
-
       </article>
     </div>
-  )
+  );
 }

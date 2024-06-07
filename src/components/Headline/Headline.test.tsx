@@ -8,7 +8,6 @@ const mockHeadline = {
   image: '/test-image.jpg', // Adicione a propriedade image aqui
 };
 
-
 describe('Headline', () => {
   it('should render headline title, category, and link', () => {
     render(<Headline headline={mockHeadline} />);
