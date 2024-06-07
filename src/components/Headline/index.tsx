@@ -9,7 +9,7 @@ type HeadlineProps = {
 
 export function Headline({ headline }: HeadlineProps) {
   return (
-    <Link href={"/noticia/" + headline.id} className={style.container}>
+    <Link href={"/noticia/" + headline.id} className={style.container} data-testid="headline-container">
       <CategoryText category={headline.category}/>
 
       <div>
